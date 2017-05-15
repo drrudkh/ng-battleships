@@ -1,4 +1,4 @@
-import { CouponsController } from './coupons.controller.js';
+import { CouponsController } from './ng/coupons.controller.js';
 
 export default angular
     .module('couponsModule', [])
@@ -7,7 +7,7 @@ export default angular
         $stateProvider
             .state('coupons', {
             url: '/coupons',
-            templateUrl: 'coupons/coupons.controller.html',
+            templateUrl: 'modules/coupons/templates/coupons.controller.html',
             controller: 'CouponsController',
             controllerAs: 'vm'
         })

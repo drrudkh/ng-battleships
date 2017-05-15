@@ -1,7 +1,7 @@
 import 'angular';
 import 'angular-ui-router';
 // Libs wrapper
-import './coupons/index.js';
+import './modules/coupons/index.js';
 
 
 
