@@ -1,3 +1,16 @@
-<section ng-controller="CouponsController as vm">
-    {{ vm.couponList }}
+<section class='container'>
+    <div class='offers'>
+        <div ng-repeat='item in vm.couponList'>
+            <coupon list='vm.couponList' element='item'></coupon>
+        </div>
+        <div class='select-buttons'>
+            <p>Selected offers: <strong>{{vm.selectedOffers}}</strong></p>
+            <button type="button" ng-click='vm.deleteCoupon()'>Delete</button>
+            <button type="button" ng-click='vm.resetCoupons()'>Reset</button>
+            <button type="button" ng-click='vm.confirmSelection()'>Confirm</button>
+        </div>
+    </div>
+    <div class="selected-offers-container">
+        <selected-coupons list='vm.confirmedCoupons' ></selected-coupons>
+    </div>
 </section>

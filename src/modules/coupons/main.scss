@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    .offers {
+        display: flex;
+        flex: 0 1 50%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        max-width: 50%;
+        .select-buttons {
+            display: flex;
+            align-items: center;
+            p {
+                margin-right: 20px;
+            }
+            button {
+                margin-right: 20px;
+            }
+        }
+        .coupon-wrap {
+            background-color: lightgrey;
+            padding: 20px;
+            margin: 10px;
+            .coupon {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                background-color: white;
+                border-style: dashed;
+                padding: 20px;
+                margin-bottom: 10px;
+                width: 200px;
+                h1 {
+
+                }
+            }
+        }
+    }
+    .selected-offers-container {
+        flex: 0 1 50%;
+        background-color: red;
+        display: flex;
+        justify-content: space-around;
+        .selected-offers {
+            background-color: white;
+            height: 150px;
+        }
+    }
+}

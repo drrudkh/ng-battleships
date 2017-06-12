@@ -38,7 +38,10 @@ module.exports = {
       'src',
       'node_modules'
     ],
-    extensions: ['.ts', '.js', '.json', '.scss', '.css', '.html', '.jpg', '.png']
+    extensions: ['.ts', '.js', '.json', '.scss', '.css', '.html', '.jpg', '.png'],
+    alias:  {
+        'coupons': path.resolve('src/modules/coupons')
+    }
   },
   node: {
     global: true,
