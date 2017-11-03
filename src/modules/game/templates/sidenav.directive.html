@@ -1,0 +1,35 @@
+<div class="side-nav-container" ng-init="change = true" ng-class="{'open': !change}">
+    <div class="menu-slider flex flex--align-center flex--column" ng-class="{'active': !change}">
+        <nav class="flex flex--column flex--just-around flex--align-center">
+            <div class="menu-item">
+                <i class="fa fa-cog" aria-hidden="true"></i>
+                <h3>Rules<h3>
+            </div>
+            <div class="menu-item">
+                <i class="fa fa-code" aria-hidden="true"></i>
+                <h3>About<h3>
+            </div>
+            <div class="menu-item">
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <h3>Achievements<h3>
+            </div>
+            <div class="menu-item">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                <h3>Contact<h3>
+            </div>            
+
+
+
+        </nav>
+        <div class="social">
+            <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
+
+        </div>
+    </div>
+    <div class="menu-icon-container" ng-click="change = !change" ng-class="{'open': !change}">
+        <div ng-repeat="bar in [bar1, bar2, bar3] track by $index" class="bar{{$index + 1}}" ng-class="{'change': !change}"></div>
+    </div>
+</div>

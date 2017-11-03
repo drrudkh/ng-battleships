@@ -1,0 +1,12 @@
+<div ng-switch="type" class="field">
+    <!-- Player Selection Field -->
+    <div ng-switch-when="player-select-field" class="cell-container" ng-repeat="(rowIndex, row) in field">
+        <div ng-repeat="(colIndex, col ) in row" class="cell" ng-click="placeShip(rowIndex, colIndex)" ng-class="{ selected: !col.isEmpty }">
+        </div>
+    </div>
+    <!-- NPC Selection Field -->
+    <div ng-switch-when="npc-select-field" class="cell-container" ng-repeat="(rowIndex, row) in field">
+        <div ng-repeat="(colIndex, col ) in row" class="cell" ng-class="{ selected: !col.isEmpty, miss: col.isMiss, hit: col.isHit}">
+        </div>
+    </div>
+</div>

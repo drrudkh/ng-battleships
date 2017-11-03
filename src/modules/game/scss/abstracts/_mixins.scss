@@ -1,0 +1,11 @@
+@mixin menu-bars-active($opacity, $deg, $x, $y) {
+	@if $opacity == false {
+		opacity: 0;
+	} @else {
+		transform: rotate($deg) translate($x, $y);
+	}
+
+	width: 20px;
+	height: 3px;
+
+}

@@ -1,0 +1,91 @@
+.side-nav-container {
+    transition: 0.5s;
+
+    &.open {
+        margin-left: 185px;
+        transition: 0.5s
+    }
+
+    .menu-icon-container {
+        cursor: pointer;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        z-index: 2;
+        transition: 0.5s;
+
+        &.open {
+            top: 10px;
+            left: 100px;
+            transition: 0.5s;
+        }
+
+        .bar1 {
+            @extend %menu-icon-bars;
+            &.change {
+                @include menu-bars-active(true, -45deg, -5px, 5px)
+            }
+        }
+
+        .bar2 {
+            @extend %menu-icon-bars;
+            &.change {
+                @include menu-bars-active(false, 45deg, -8px, -8px)
+            }
+        }
+
+        .bar3 {
+            @extend %menu-icon-bars;
+            &.change {
+                @include menu-bars-active(true, 45deg, -8px, -8px)
+            }
+        }
+    }
+
+    .menu-slider {
+        height: 100vh;
+        width: 0;
+        box-sizing: border-box;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: $dark-grey;
+        overflow-x: hidden;
+        padding-top: 80px;
+        padding-bottom: 10px;
+        transition: 0.5s;
+        &.active {
+            width: 135px;
+        }
+
+        nav {
+            flex-grow: 3;
+
+            .menu-item {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                .fa {
+                    color: $light-grey;
+                    font-size: 3.5em;
+                }
+
+                h2 {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .social {
+            height: 80px;
+            width: 70%;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            .fa {
+                color: $light-grey;
+            }
+        }
+    }
+}

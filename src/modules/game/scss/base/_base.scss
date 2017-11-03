@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+}
+
+
+
+
+/*  FLEX CLASS  */
+
+
+/*  DECLARATION  --------------------------------------------------------------- */
+
+.flex {
+    display: flex;
+
+    /*  DIRECTION ( ORIENTATION )  ------------------------------------------------- */
+    &--column {
+        flex-direction: column;
+    }
+
+    &--row {
+        flex-direction: row;
+    }
+
+/* MIXIN FOR JUSTIFY-CONTENT AND ALIGN-ITEMS --------------------------------------- */
+    @mixin just-align($name, $prop, $arr) {
+      @each $mod, $dir in $arr {
+          &--#{$name}-#{$mod} {
+              #{$prop}: #{$dir};
+          }
+      }
+  }  
+
+    /*  JUSTIFICATION (Main axis)   ------------------------------------------------ */
+    $justify-positions: ( 
+    	start: flex-start,
+    	end: flex-end,
+    	center: center,
+    	around: space-around,
+    	between: space-between,
+    	evenly: space-evenly
+    );
+
+    @include just-align('just', 'justify-content', $justify-positions);
+
+    /*   ALIGN ITEMS ( Cross axis )   ------------------------------------------------ */
+    $align-positions: ( 
+    	start: flex-start,
+    	end: flex-end,
+    	center: center,
+    	stretch: stretch,
+    	baseline: baseline
+    );
+
+    @include just-align('align', 'align-items', $align-positions);
+
+    /*  WRAPPING   -------------------------------------------------------------------- */
+    $wrappers: (
+    	true: wrap,
+    	false: no-wrap,
+    	rev: wrap-reverse 
+    	);
+
+    @each $mod, $value in $wrappers {
+    	&--wrap-#{$mod} {
+    		flex-wrap: $value;
+    	}
+    }
+
+}

@@ -1,6 +1,6 @@
-import 'coupons';
+import 'game';
 
 export default angular
     .module('modules', [
-    'couponsModule'
+    'gameModule'
 ])

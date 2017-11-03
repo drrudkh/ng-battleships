@@ -1,0 +1,48 @@
+<section class="main-container">
+    <div class="side-nav-container" ng-init="change = true" ng-class="{'open': !change}">
+        <div class="menu-slider flex flex--align-center flex--column" ng-class="{'active': !change}">
+            <nav class="flex flex--column flex--just-around flex--align-center">
+                <div class="menu-item">
+                    <i class="fa fa-cog" aria-hidden="true"></i>
+                    <h3>Rules<h3>
+            </div>
+            <div class="menu-item">
+                <i class="fa fa-code" aria-hidden="true"></i>
+                <h3>About<h3>
+            </div>
+            <div class="menu-item">
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                <h3>Achievements<h3>
+            </div>
+            <div class="menu-item">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                <h3>Contact<h3>
+            </div>            
+        </nav>
+        <div class="social">
+            <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>
+
+        </div>
+    </div>
+    <div class="menu-icon-container" ng-click="change = !change" ng-class="{'open': !change}">
+        <div ng-repeat="bar in [bar1, bar2, bar3] track by $index" class="bar{{$index + 1}}" ng-class="{'change': !change}"></div>
+    </div>
+</div>
+    <div class="field-container player">
+        <nav-dir></nav-dir>
+        <field-dir type="player-select-field" field="vm.playerSelectionField" ship-opt="vm.shipObj"></field-dir>
+<!--         <div ng-repeat="ship in vm.ships">
+            <input type="radio" name="ships" ng-value="ship.size" ng-model="vm.shipObj.size">{{ ship.type }}
+        </div>
+        <div>
+            <input type="radio" name="orientation" ng-value="{x: 0, y: 1}" ng-model="vm.shipObj.dir">Vertical
+            <input type="radio" name="orientation" ng-value="{x: 1, y: 0}" ng-model="vm.shipObj.dir">Horizontal
+        </div> -->
+    </div>
+    <div class="field-container npc">
+        <field-dir type="npc-select-field" field="vm.npcSelectionField" ng-click="vm.fireShot()""></field-dir>
+    </div>
+</section>

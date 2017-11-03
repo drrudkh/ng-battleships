@@ -1,0 +1,16 @@
+.field-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+
+    &.player {
+        background-color: $fresh;
+    }
+
+    &.npc {
+        background-color: $light-grey;
+    }
+
+    .field {}
+}

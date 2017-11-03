@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+
 /**
  * Plugins
  */
@@ -40,7 +41,7 @@ module.exports = {
     ],
     extensions: ['.ts', '.js', '.json', '.scss', '.css', '.html', '.jpg', '.png'],
     alias:  {
-        'coupons': path.resolve('src/modules/coupons')
+        'game': path.resolve('src/modules/game')
     }
   },
   node: {
