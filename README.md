@@ -1,5 +1,5 @@
 # ng-battleships
-AngularJS implementation of Battleships board game.
+AngularJS implementation of the Battleships board game.
 
 TODO:
 
